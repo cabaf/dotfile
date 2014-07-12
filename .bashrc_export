@@ -1,0 +1,16 @@
+# Prepend local binaries.
+export PATH=/usr/local/bin:$PATH
+# Atom required.
+export PATH=$PATH:$HOME/node_modules/.bin:/tmp/atom-build/Atom
+
+# Prepend local libraries.
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+# Google chrome required.
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/google/chrome
+
+# Append site packages.
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages
+# Append path for h5py module.
+export PYTHONPATH=$PYTHONPATH:/opt/h5py-2.3.0/h5py
+# Append path for yael module.
+export PYTHONPATH=$PYTHONPATH:$HOME/yael_v371

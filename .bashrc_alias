@@ -1,0 +1,63 @@
+### Aliases ###
+################################
+
+# Listing
+alias ls='ls -c --color=auto'
+alias la='ls -ac --color=auto'
+alias ll='ls -lah --color=auto'
+alias lsd='ls -d */'
+alias lsz='ls -AZ --color=auto'
+
+# with grep
+alias lsg='ls --color=auto | g'
+alias lag='ls -a --color=auto | g'
+alias llg='ls -lah --color=auto | g'
+
+# Colorize grep
+alias g="grep --color=always"
+alias gi="grep -i --color=always"
+
+# Confirm
+alias mv='mv -i'
+alias cp='cp -i'
+alias rm='rm -i'
+
+# Override -f
+alias rmf='rm -Rfv'
+alias cpf='\cp -v'
+alias mvf='\mv -v'
+alias rmf='rm -Rfv'
+
+# Betty script
+alias betty=/home/cabaf/betty/main.rb
+
+# No colbber 
+set -o noclobber # Override >|
+
+# Sysadmin
+alias psa='ps auxf'
+alias psg='ps aux | grep' #requires an argument
+# alias date='date "+%A %B %d, %Y %l:%M %p %Z"'
+alias date='echo -ne "${LIGHTBLUE}";date "+%A %B %d, %Y %l:%M %p %Z"'
+alias cal='echo -e "${CYAN}"; cal""'
+alias hist='history | g $1' #Requires one input
+alias du='du -sh'
+alias dul='\du -h | less'
+alias df='df -h'
+
+# Editors and typos
+NANO=`which nano`
+if [ -z "${NANO}" ]; then
+if [ -x /usr/bin/vim ]; then
+alias nano='/usr/bin/vim'
+else
+alias nano='/usr/bin/vm'
+fi
+fi
+
+# test vim
+if [ -x /usr/bin/vim ]; then
+alias bim='/usr/bin/vim'
+else
+alias bim='/usr/bin/vm'
+fi
