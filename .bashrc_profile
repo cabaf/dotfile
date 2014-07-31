@@ -38,7 +38,8 @@ else
 	PS1='\[\033[01;32m\]\u\[\033[01;30m\]@\[\033[01;34m\]\h\[\033[01;30m\]:\[\033[01;34m\]\w\[\033[00m\]\$' #Green
 fi
 
-if [[ -n "$PS1" ]]; then
+# If interactive mode shows a welcome message.
+if [[ $- =~ "i" ]]; then
 	clear 
 	cal -3
 	echo
